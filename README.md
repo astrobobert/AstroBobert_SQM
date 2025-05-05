@@ -8,7 +8,7 @@ SSIDS = 'lan1,lan2,lan3'
 PASSWORDS = 'password1,password2,password3'
 ```
 
-Note: If your LAN has multipule access points. The last matching ssid in the list will be used to connect.  
+Note: If your have multipule LANs. The last matching ssid in the list will be used to connect.  
 
 main.py is written for Raspberry Pi PicoW with micropython firmware  
 (avaiable at https://micropython.org/download/RPI_PICO_W/)  

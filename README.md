@@ -1,10 +1,16 @@
 # AstroBobert
-tsl2591.py is from https://github.com/jfischer/micropython-tsl2591\
-secrets.py contains ssids & passwords for your LAN.\
-    Example secrets.py file:\
-        SSIDS = 'lan1,lan2,lan3'\
-        PASSWORDS = 'password1,password2,password3'\
-    Note: If your LAN has multipule access points. The last ssid matching entry in the list will be used to connect to your LAN\
+tsl2591.py is from https://github.com/jfischer/micropython-tsl2591
+
+secrets.py contains ssids & passwords for your LAN.
+
+    Example secrets.py file:
+
+        SSIDS = 'lan1,lan2,lan3'
+
+        PASSWORDS = 'password1,password2,password3'
+
+    Note: If your LAN has multipule access points. The last ssid matching entry in the list will be used to connect to your LAN
+    
  main.py is written for Raspberry Pi PicoW with micropython firmware (avaiable at https://micropython.org/download/RPI_PICO_W/)
 
 ## THE FOLLOWING COMMENTS WERE MODIFIED FROM chvvkumar GITHUB REPOSITORY

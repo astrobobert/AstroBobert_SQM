@@ -196,13 +196,13 @@ def flash_led(cnt, pause):
         time.sleep(pause)
 
 LED.on()
-s = connect_TCP()
+connection = connect_TCP()
 open_config()
 # tsl = init_tsl2591()
 
 try:
     while True:
-        client_sock, addr = s.accept()
+        client_sock, addr = connection.accept()
         print('Client connected from:', addr)
         ## Uncomment for terminal debugging and calibration
         ## Comment out for APT otherwise APT will receive COMMANDS instead of mpsas data when it connects

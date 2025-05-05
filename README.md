@@ -13,7 +13,7 @@ Note: If your LAN has multipule access points. The last matching ssid in the lis
 main.py is written for Raspberry Pi PicoW with micropython firmware  
 (avaiable at https://micropython.org/download/RPI_PICO_W/)  
 
-## THE FOLLOWING COMMENTS WERE MODIFIED FROM chvvkumar GITHUB REPOSITORY
+### THE FOLLOWING COMMENTS WERE MODIFIED FROM chvvkumar GITHUB REPOSITORY
 ## PiSQM - Sky Quality Meter for Raspberry Pi
 Heavily inspired by Richard's work on the ESP platform
 
@@ -27,11 +27,14 @@ A Sky Quality Meter implementation for Raspberry Pi using the TSL2591 light sens
 - Appropriate housing/enclosure for outdoor use (if applicable)
 
 ## Installation
+Edit lib.secrets.py as discribed above to use your LAN Ssid and Password prior to uploading to PicoW.
+
 The program will:
 1. Connect to LAN as server
 2. Initialize the TSL2591 sensor
 3. Take measurements upon request
-4. Returns readings in Unihedron format (avaiable at https://www.unihedron.com/projects/darksky/cd/SQM-LE/SQM-LE_Users_manual.pdf)
+4. Returns readings in Unihedron format  
+(avaiable at https://www.unihedron.com/projects/darksky/cd/SQM-LE/SQM-LE_Users_manual.pdf)
 5. Print readings to the console
 
 Program runs till shutdown.

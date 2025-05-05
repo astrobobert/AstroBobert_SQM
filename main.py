@@ -22,7 +22,7 @@
 # Msqm = A - 2.5*log10(frequency); //Frequency to magnitudes/arcSecond2 formula
 
 from machine import Pin, I2C
-import lib.tsl2591 as tsl2591
+import tsl2591
 import time
 import math
 import sys

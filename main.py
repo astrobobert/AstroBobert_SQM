@@ -34,9 +34,7 @@ import json
 # Constants
 # APPROVED_SSID = [b'AstroBobert_2G', b'Galaxy S20 FE']
 SSIDS = secrets.SSIDS.split(',')
-print(SSIDS)
 PASSWORDS = secrets.PASSWORDS.split(',')
-print(PASSWORDS)
 I2CDATA = 16
 I2CCLK = 17
 LED = machine.Pin("LED", machine.Pin.OUT)
@@ -71,7 +69,6 @@ def connect_TCP():
         wlan = network.WLAN(network.STA_IF)
         wlan.config(hostname='AstroBobert_SQM')
         wlan.active(True)
-        #print(wlan.scan())
         available_networks = wlan.scan()
         indx = 0
         for ssid in SSIDS:
@@ -85,9 +82,7 @@ def connect_TCP():
             indx += 1
             print(indx)
         wlan.connect(SSID, PASSWORD)
-        # wlan.connect(b'AstroBobert_2G', b'canvas6864')
         while not wlan.isconnected():
-            # print(wlan.scan())
             flash_led(1, 0.5)
         print('Wifi Connected')
         ip_address = wlan.ifconfig()[0]
@@ -209,8 +204,8 @@ try:
     while True:
         client_sock, addr = s.accept()
         print('Client connected from:', addr)
-        # Uncomment for terminal debugging and calibration
-        # Comment out for APT otherwise APT will receive COMMANDS instead of mpsas data when it connects
+        ## Uncomment for terminal debugging and calibration
+        ## Comment out for APT otherwise APT will receive COMMANDS instead of mpsas data when it connects
         # client_sock.send(COMMANDS)
         try:
             while True:

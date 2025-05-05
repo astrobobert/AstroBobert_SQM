@@ -198,7 +198,7 @@ def flash_led(cnt, pause):
 LED.on()
 connection = connect_TCP()
 open_config()
-# tsl = init_tsl2591()
+tsl = init_tsl2591()
 
 try:
     while True:

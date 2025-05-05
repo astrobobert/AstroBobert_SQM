@@ -32,7 +32,6 @@ import secrets
 import json
 
 # Constants
-# APPROVED_SSID = [b'AstroBobert_2G', b'Galaxy S20 FE']
 SSIDS = secrets.SSIDS.split(',')
 PASSWORDS = secrets.PASSWORDS.split(',')
 I2CDATA = 16

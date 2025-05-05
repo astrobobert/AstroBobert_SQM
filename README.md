@@ -1,4 +1,4 @@
-# AstroBobert
+# AstroBobert SQM
 tsl2591.py is from https://github.com/jfischer/micropython-tsl2591  
 secrets.py contains ssids & passwords for your LAN.  
 Example secrets.py file:

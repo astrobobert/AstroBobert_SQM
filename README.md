@@ -10,7 +10,7 @@ PASSWORDS = 'password1,password2,password3'
 
 Note: If your have multipule LANs. The last matching ssid in the list will be used to connect.  
 
-main.py is written for Raspberry Pi PicoW with micropython firmware  
+main.py is written for Raspberry Pi PicoW and Micropython firmware  
 (avaiable at https://micropython.org/download/RPI_PICO_W/)  
 
 ### THE FOLLOWING COMMENTS WERE MODIFIED FROM chvvkumar GITHUB REPOSITORY

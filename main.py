@@ -41,12 +41,12 @@ CONFIG = {"integration": tsl2591.INTEGRATIONTIME_100MS, "gain": tsl2591.GAIN_LOW
 INTEGRATION_TIME_ARRAY = (['100ms', '200ms', '300ms', '400ms', '500ms', '600ms'])
 GAIN_ARRAY = (['Low', 'Med', 'High', 'Max'])
 PORT = 10001
-COMMANDS = (b'rx_  = display sensor + config\r'
+COMMANDS = (b'rxc  = display sensor + config\r'
             b'rx   = display sensor\r'
             b'show = display config\r'
             b'help = display commands\r'
             b'save = save config\r'
-            b'exit = quit app\r'
+            b'exit = close connection\r'
             b'gain [arg] = display/set gain [low, med, high, max]\r'
             b'time [arg] = display/set time [100, 200, 300, 400, 500, 600]\r'
             b'm0 [arg]   = display/set m0 factor [defualt -16.07]\r'
@@ -203,30 +203,31 @@ try:
     while True:
         client_sock, addr = connection.accept()
         print('Client connected from:', addr)
-        ## Uncomment for terminal debugging and calibration
-        ## Comment out for APT otherwise APT will receive COMMANDS instead of mpsas data when it connects
+
+        ## Uncomment for terminal communication and calibration. Comment out for APT. Otherwise APT will receive COMMANDS instead of mpsas data when it connects
         # client_sock.send(COMMANDS)
+
         try:
             while True:
                 request = client_sock.recv(1024)
-                print(request)
+                # print(request)
                 command = request.split(b' ')
                 if not request:
                     break
                 elif command[0] == b'\r\n':
                     client_sock.send('\r>> ')
-                elif command[0] == b'rx_':
+                elif command[0] == b'rxc':
                     _mpsas = get_mpsas() + '\r\n'
                     _gain={GAIN_ARRAY[hex_to_dec(tsl.gain)]}
                     _time={INTEGRATION_TIME_ARRAY[tsl.integration_time]}
                     mpsas_data = f'{_mpsas}\rgain={_gain} time={_time}'
-                    client_sock.send(mpsas_data.encode('utf-8')) # Echo back to client
+                    client_sock.send(mpsas_data.encode()) # Echo back to client
                 elif command[0] == b'rx':
                     LED.off()
                     time.sleep(0.5)
                     _mpsas = get_mpsas()
-                    print(_mpsas.encode('utf-8'))
-                    client_sock.send(_mpsas.encode('utf-8')) # Echo back to client
+                    print(_mpsas.encode())
+                    client_sock.send(_mpsas.encode()) # Echo back to client
                     LED.on()
                 elif command[0] == b'time':
                     if len(command) == 2:

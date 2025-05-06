@@ -13,7 +13,7 @@ Note: If your have multipule LANs. The last matching ssid in the list will be us
 main.py is written for Raspberry Pi PicoW and Micropython firmware  
 (avaiable at https://micropython.org/download/RPI_PICO_W/)  
 
-### THE FOLLOWING COMMENTS WERE MODIFIED FROM chvvkumar GITHUB REPOSITORY
+### THE FOLLOWING COMMENTS WERE MODIFIED FROM chvvkumar/PiSQM GITHUB REPOSITORY
 ## PiSQM - Sky Quality Meter for Raspberry Pi
 Heavily inspired by Richard's work on the ESP platform
 

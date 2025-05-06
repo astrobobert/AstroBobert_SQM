@@ -1,7 +1,7 @@
 ## Calibration
 I use Putty to establish a telnet connection to the SQM  
 Set:  
-* Host Name (or IP address) = AstroBobert_SQM (or IP address assigned by your router)
+* Host Name (or IP address) = IP address assigned by your access point/router
 * Port = 10001
 * Connection Type = Other/Telnet  
 

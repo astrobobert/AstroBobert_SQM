@@ -37,7 +37,7 @@ The program will:
 (avaiable at https://www.unihedron.com/projects/darksky/cd/SQM-LE/SQM-LE_Users_manual.pdf)
 5. Print readings to the console
 
-Program runs till shutdown.
+Program runs till powered down.
 
 ## Calibration
 The glass attenuation factor (GA) in main.py may need adjustment based on your setup:

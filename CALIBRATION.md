@@ -1,13 +1,13 @@
 ## Calibration
 I use Putty to establish a telnet connection to the SQM  
 Set:  
-* Host Name (or IP address) = AstroBobert_SQM
+* Host Name (or IP address) = AstroBobert_SQM (or IP address assigned by your router)
 * Port = 10001
 * Connection Type = Other/Telnet  
 
 Upon connection if main.py code "client_sock.send(COMMANDS)" is commented out, you will have to type help to see the fellow commans syntax. Otherwiise this command list will display upon connection.
 ~~~
-rx_  = display sensor + config  
+rxc  = display sensor + config  
 rx   = display sensor  
 show = display config  
 help = display commands  
